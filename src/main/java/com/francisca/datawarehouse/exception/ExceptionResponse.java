@@ -10,8 +10,10 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class ExceptionResponse {
+public class ExceptionResponse<T> {
     private String message;
     private LocalDateTime timeStamp;
     private HttpStatus status;
+
+
 }

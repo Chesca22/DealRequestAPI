@@ -6,6 +6,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class DatawarehouseApplicationTests {
 
+	//todo
+	// if you do have the time it would be nice to add some tests
 	@Test
 	void contextLoads() {
 	}

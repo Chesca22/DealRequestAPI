@@ -8,6 +8,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
+
 public class ApiResponse<T> {
     private String message;
     private LocalDateTime timeStamp;

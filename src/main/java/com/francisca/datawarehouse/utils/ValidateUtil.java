@@ -11,6 +11,7 @@ import java.text.NumberFormat;
 import java.util.Currency;
 import java.util.Locale;
 import java.util.Set;
+import java.util.regex.Pattern;
 
 
 @RequiredArgsConstructor
@@ -18,36 +19,25 @@ import java.util.Set;
 @Getter
 public class ValidateUtil {
 
-
-
     public String validateCurrency(String code) {
+        Currency.getAvailableCurrencies();
         for(Currency currency : Currency.getAvailableCurrencies()) {
-            if(currency.getCurrencyCode().equalsIgnoreCase(code)) {
+            if(currency.getCurrencyCode().equals(code)) {
                 return code;
-            }
+
         }
-        throw new InvalidCurrencyException("Unkown currency code: " + code);
+        }
+        throw new InvalidCurrencyException("Unknown currency code: " + code);
     }
 
 
-    public String formatAmount(String amount, String currencyCode){
-        try {
-            Float amountFloat = Float.parseFloat(amount);
 
-            Locale locale = new Locale(Currency.getInstance(validateCurrency(currencyCode)).getCurrencyCode());
-            NumberFormat Us = NumberFormat.getCurrencyInstance(locale);
-            String m = (Us.format(amountFloat));
-            return m;
-        } catch (NumberFormatException e) {
+
+    public BigDecimal handleDealAmount(BigDecimal amount) {
+        if(amount == null) {
             throw new InvalidCurrencyException("Invalid amount: " + amount);
         }
+        return amount;
     }
 
-//    public String formatAmount(String amount, String currencyCode){
-//        Float amountFloat = Float.parseFloat(amount);
-//        Locale locale = new Locale(Currency.getInstance(currencyCode).getCurrencyCode());
-//        NumberFormat Us = NumberFormat.getCurrencyInstance(locale);
-//        String m = (Us.format(amountFloat));
-//        return m;
-//    }
 }
