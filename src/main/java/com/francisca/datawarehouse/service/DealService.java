@@ -8,7 +8,6 @@ import java.util.List;
 
 public interface DealService {
     ApiResponse<?> saveDealDetails(RequestDto dto) throws Exception;
-    ApiResponse<List<DealDetailsDto>> getAllDeals();
 
-    ApiResponse<DealDetailsDto> getDealById(String id);
+    List<DealDetailsDto> getAllDeals();
 }

@@ -2,7 +2,6 @@ package com.francisca.datawarehouse.model;
 
 import jakarta.annotation.Generated;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
@@ -27,19 +26,19 @@ public class DealDetails implements Serializable {
    @GeneratedValue(strategy= GenerationType.AUTO)
    private Long Id;
 
+    @NotNull
+   private String dealId;
 
-    private String dealId;
+    @Size(min = 3, max = 3, message = "Ordering currency code must be 3 characters")
+    @Pattern(regexp="^[A-Za-z]*$",message = "Invalid Input")
 
+   private String orderingCurrency;
+    @Size(min = 3, max = 3, message = "Ordering currency code must be 3 characters")
+    @Pattern(regexp="^[A-Za-z]*$",message = "Invalid Input")
+   private String convertedCurrency;
 
-    @Pattern(regexp="^[A-Z]{3}$",message = "Invalid Input")
-    private String orderingCurrency;
-
-    @Pattern(regexp="^[A-Z]{3}$",message = "Invalid Input")
-
-    private String convertedCurrency;
-
-   @NotNull(message = "amount cannot be blank")
-   private BigDecimal amount;
+   @NotNull
+   private String amount;
 
    @CreationTimestamp
    private LocalDateTime dealTimeStamp;

@@ -13,11 +13,12 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Getter
 @Builder
+
 public class DealDetailsDto {
     private String dealId;
     private String orderingCurrency;
     private String convertedCurrency;
-    private BigDecimal amount;
+    private String amount;
     private LocalDateTime dealTimeStamp;
 
 }

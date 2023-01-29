@@ -34,12 +34,6 @@ Data warehouse is a central repository of integrated data from one or more dispa
 - Open the cloned project in intelliJ Idea;
 - Go to POM.xml the update Project to update all the maven dependencies;
 - Maven Build the project and run;
-
-#### Resource
-- POST - /api/deals - Accepts deals 
-- GET - /api/deals - Get all deals
-- GET - /api/deals/{deal-id} Get a deal by id
-
 ---
 #### Testing The API Endpoints
 ---
@@ -51,8 +45,8 @@ curl --location --request POST 'http://127.0.0.1:8080/api/deals' \
 --header 'Content-Type: application/json' \
 --data-raw '{
                     "dealId": "3940046",
-                    "orderingCurrency": USD",
-                    "convertedCurrency": "NGN",
+                    "orderingCurrency": "usd",
+                    "convertedCurrency": "ngn",
                     "amount": "45987"
              }'
 ````
