@@ -3,8 +3,7 @@
 :scroll: **START**
 ## Introduction
 Suppose you are part of a scrum team developing data warehouse for Bloomberg to analyze FX deals. One of customer stories is to accept deals details from and persist them into DB.
-
-Data warehouse is a central repository of integrated data from one or more disparate sources. It is used for reporting and data analysis. Data warehouse is a subject-oriented, integrated, nonvolatile and time-variant collection of data in support of management's decision making process. 
+Data warehouse is a central repository of integrated data from one or more disparate sources. It is used for reporting and data analysis. Data warehouse is a subject-oriented, integrated, nonvolatile and time-variant collection of data in support of management's decision making process. Data warehouse is a copy of transaction data specifically structured for querying and analysis. It is a subject-oriented, integrated, nonvolatile and time-variant collection of data in support of management's decision making process. Data warehouse is a copy of transaction data specifically structured for querying and analysis.
 
 ---
 ### Task description
