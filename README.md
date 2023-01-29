@@ -29,7 +29,7 @@ Data warehouse is a central repository of integrated data from one or more dispa
 - Database: Postgres;
 - Postman(For testing);
   Steps by step for building and running the project locally;
-  Clone the from the link git clone https://github.com/Chesca22/DealRequestAPI
+  Clone from the link git clone https://github.com/Chesca22/DealRequestAPI
 - Open the cloned project in intelliJ Idea;
 - Go to POM.xml the update Project to update all the maven dependencies;
 - Maven Build the project and run;

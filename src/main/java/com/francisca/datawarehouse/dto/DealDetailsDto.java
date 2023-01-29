@@ -18,7 +18,7 @@ public class DealDetailsDto {
     private String dealId;
     private String orderingCurrency;
     private String convertedCurrency;
-    private String amount;
+    private BigDecimal amount;
     private LocalDateTime dealTimeStamp;
 
 }

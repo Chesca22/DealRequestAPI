@@ -7,11 +7,7 @@ import org.springframework.stereotype.Service;
 @Service
 public  class ResponseService<T>{
 
-    private T response;
-    private HttpStatus status;
-
-    public ResponseEntity<T> response(T response , HttpStatus status){
-        return new ResponseEntity<>(response , status);
+        public ResponseEntity<T> response(T response , HttpStatus status){
+            return new ResponseEntity<>(response , status);
+        }
     }
-
-}

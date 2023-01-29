@@ -9,5 +9,9 @@ import java.util.List;
 public interface DealService {
     ApiResponse<?> saveDealDetails(RequestDto dto) throws Exception;
 
-    List<DealDetailsDto> getAllDeals();
+    ApiResponse<List<DealDetailsDto>> getAllDeals();
+
+    ApiResponse<DealDetailsDto> getDealById(String id);
+
+
 }

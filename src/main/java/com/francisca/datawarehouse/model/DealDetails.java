@@ -22,24 +22,25 @@ import java.time.LocalDateTime;
 @Setter
 @Builder
 public class DealDetails implements Serializable {
-   @Id
-   @GeneratedValue(strategy= GenerationType.AUTO)
-   private Long Id;
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    private Long Id;
 
     @NotNull
-   private String dealId;
+    private String dealId;
 
-    @Size(min = 3, max = 3, message = "Ordering currency code must be 3 characters")
-    @Pattern(regexp="^[A-Za-z]*$",message = "Invalid Input")
 
-   private String orderingCurrency;
-    @Size(min = 3, max = 3, message = "Ordering currency code must be 3 characters")
-    @Pattern(regexp="^[A-Za-z]*$",message = "Invalid Input")
-   private String convertedCurrency;
+    @Pattern(regexp="^[A-Z]{3}$",message = "Invalid Input")
+    private String orderingCurrency;
 
-   @NotNull
-   private String amount;
+    @Pattern(regexp="^[A-Z]{3}$",message = "Invalid Input")
 
-   @CreationTimestamp
-   private LocalDateTime dealTimeStamp;
+    private String convertedCurrency;
+
+    @NotNull(message = "amount cannot be blank")
+    private BigDecimal amount;
+
+    @CreationTimestamp
+    private LocalDateTime dealTimeStamp;
 }
+
