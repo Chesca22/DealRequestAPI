@@ -33,4 +33,6 @@ public class DealController {
         log.info("deal retrieved successfully");
         return new ResponseEntity<>(dealService.getDealById(id), OK);
     }
+
+
 }

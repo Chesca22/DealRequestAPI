@@ -43,7 +43,7 @@ private final ValidateUtil validateUtil;
             dealRepository.save(dealDetails);
             log.info("deal details saved successfully");
 
-            return new ApiResponse<>("Deal with Id number: " + dealDetails.getDealId() + " saved successfully", LocalDateTime.now(), CREATED);
+            return new ApiResponse<>("success" , LocalDateTime.now(), CREATED);
         }
         else {
             throw new DealAlreadyExistException("Deal with Id number: " + uniqueId + " already exist");
@@ -74,4 +74,6 @@ private final ValidateUtil validateUtil;
         log.info("Deal with Id number: " + id + " retrieved successfully");
         return new ApiResponse<>("success",LocalDateTime.now(),mapToDealDetailsDto(dealDetails));
     }
+
+
 }

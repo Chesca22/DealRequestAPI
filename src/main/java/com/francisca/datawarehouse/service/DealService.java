@@ -13,5 +13,4 @@ public interface DealService {
 
     ApiResponse<DealDetailsDto> getDealById(String id);
 
-
 }
